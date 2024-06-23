@@ -1,0 +1,203 @@
+body{
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-container{
+    height: 100%;
+    width: 70%;
+}
+/******************************** top section ********************************/
+.top-section{
+    padding: 1rem;
+    background-color: rgb(22, 21, 21);
+    display: flex;
+    justify-content: left;
+    /* gap: 3rem; */
+}
+.top-section .menu-btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-section .menu-btn i{
+    color: white;
+    display: none;
+}
+.top-section .title{
+    width: 100%;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/******************************** screen ********************************/
+.screen{
+    height: 12.34rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.8rem;
+}
+.screen input{
+    width: 99%;
+    height: 99%;
+    background-color: rgb(42, 41, 41);
+    font-size: 4rem;
+    font-weight: 500;
+    color: white;
+    outline: none;
+}
+
+/******************************** keyboard ********************************/
+.keyboard{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.keyboard .onerow{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+}
+.keyboard .onerow button{
+    background-color: rgb(52, 51, 51);
+    width: 100%;
+    height: 3.9rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.keyboard .onerow button:hover{
+    background-color: rgb(75, 74, 74);
+}
+.keyboard .onerow .number-btn{
+    background-color: rgb(75, 74, 74);
+}
+.keyboard .onerow .number-btn:hover{
+    background-color: rgb(52, 51, 51);
+}
+.keyboard .onerow .equal-btn{
+    background-color: rgb(55, 148, 224);
+}
+.keyboard .onerow .equal-btn:hover{
+    background-color: rgb(37, 114, 177);
+}
+
+/******************************** history for pc ********************************/
+.page-history{
+    background-color: black;
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.page-history .header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid white;
+    padding-bottom: 0.5rem;
+}
+.page-history .header .history-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+.page-history .header .delete-history{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: white;
+}
+.page-history .history-container{
+    padding-top: 1rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    height: 80vh;
+    overflow-y: auto;
+}
+.page-history .history-container .calculation{
+    width: 100%;
+    background: none;
+    border-bottom: 0.1rem solid rgb(75, 74, 74);
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: right;
+}
+
+/******************************** history for mobile screen ********************************/
+.offcanvas{
+    background-color: black;
+}
+.offcanvas .offcanvas-header{
+    border-bottom: 0.1rem solid white;
+}
+.offcanvas .offcanvas-header .offcanvas-title{
+    color: white;
+}
+.offcanvas .offcanvas-header .btn-close{
+    color: white;
+}
+.offcanvas-body .offcanvas-history-container{
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    height: 75vh;
+    overflow-y: auto;
+}
+.offcanvas-body .offcanvas-history-container .calculation{
+    width: 100%;
+    background: none;
+    border-bottom: 0.1rem solid rgb(75, 74, 74);
+    padding-bottom: 0.3rem;
+    display: flex;
+    justify-content: right;
+}
+.clr-history{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+
+/******************************** responsiveness ********************************/
+@media (max-width: 550px){
+    .page-container{
+        width: 100%;
+    }
+    .top-section .menu-btn i{
+        display: flex;
+    }
+    .screen{
+        height: 11rem;
+    }
+    .screen input{
+        font-size: 2.5rem;
+    }
+    .keyboard .onerow button{
+        font-size: 1.3rem;
+    }
+    .page-history{
+        display: none;
+    }
+    .hidden-history{
+        display: flex;
+    }
+
+}

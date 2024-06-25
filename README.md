@@ -14,6 +14,8 @@ This repository contains three web development projects that I have developed as
     How to View:
     - Open the `index.html` file in a web browser.
 
+![Portfolio](https://github.com/janhavibandbe/CodSoft-WebDev/assets/154860008/7ceea5d2-dd5e-4c17-8794-012c7f515fdd)
+
 ## 2. Calculator
     Description:
     - A scientific calculator built using HTML, CSS, and JavaScript.
@@ -29,6 +31,8 @@ This repository contains three web development projects that I have developed as
     How to Use:
     - Open the `index.html` file in a web browser.
 
+![Calculator](https://github.com/janhavibandbe/CodSoft-WebDev/assets/154860008/11c9ebcc-b8d8-4de0-8349-aab33ee3892f)
+
 ## 3. Landing Page
     Description:
     - A landing page for a headphone company built using HTML, CSS, and JavaScript.
@@ -41,6 +45,8 @@ This repository contains three web development projects that I have developed as
 
     How to View:
     - Open the `index.html` file in a web browser.
+
+![Landing Page](https://github.com/janhavibandbe/CodSoft-WebDev/assets/154860008/fb7ab796-3cac-4d4b-8dbe-c92d4b368b6b)
 
 ## How to Clone the Repository
     To clone this repository, run the following command in your terminal:

@@ -1,0 +1,919 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+:root{
+    --nav-color: #373945;
+    --nav-text-color: #dca0c9;
+    --text-color1: #292b35;
+    --text-color2: #202124;
+    --background-color1: #4c5270;
+    --background-color2: #9fefdb;
+}
+/********************************* navbar *********************************/
+.header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    background-color: var(--nav-color);
+    z-index: 10;
+}
+.navContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 25rem;
+    padding-right: 5rem;
+}
+.logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 20%;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    color: var(--nav-text-color);
+}
+.navContainer .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.navContainer .navbar a{
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+.navContainer .navbar a:hover{
+    color: #f45ec5;
+}
+.menuBtn{
+    background: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.hidden-nav{
+    display: none;
+    margin-top: 5.5rem;
+    margin-right: 2rem;
+    width: 100%;
+    position: absolute;
+    justify-content: right;
+    transition: 0.5s ease;
+}
+.hidden-nav .hidden-home, 
+.hidden-nav .hidden-newRelease, 
+.hidden-nav .hidden-products, 
+.hidden-nav .hidden-about, 
+.hidden-nav .hidden-contact{
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    background-color: var(--text-color1);
+    border-bottom: 0.1rem solid var(--background-color1);
+    transition: 0.5s;
+}
+.hidden-nav .hidden-home:hover, 
+.hidden-nav .hidden-newRelease:hover, 
+.hidden-nav .hidden-products:hover, 
+.hidden-nav .hidden-about:hover, 
+.hidden-nav .hidden-contact:hover{
+    background: rgba(41, 43, 53, 0.9);
+}
+.hidden-nav a{
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+/********************************* home section *********************************/
+.home{
+    display: flex;
+    justify-content: right;
+    padding-top: 7rem;
+    padding-right: 1rem;
+    background-color: var(--background-color2);
+    height: 40rem;
+}
+.home .homeImage{
+    padding-left: 4rem;
+    padding-top: 1rem;
+    height: 20rem;
+    width: 20rem;
+}
+.home .homeImage img{
+    position: absolute;
+    height: 30rem;
+}
+.home .homeContainer{
+    background-color: var(--nav-text-color);
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5rem;
+}
+.homeContainer .pageDescription{
+    padding-right: 4rem;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.homeContainer .pageDescription .tagline{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color2);
+}
+.homeContainer .pageDescription .subline{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color1);
+}
+.homeContainer .pageDescription .button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+}
+.pageDescription .button .learnMore, .shopNow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+/* ---------------------------------button-------------------------------------- */
+button{
+    background-color: var(--nav-color);
+    height: 2.8rem;
+    width: 10rem;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--nav-text-color);
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    height: 3rem;
+    width: 10.5rem;
+    font-size: 1.25rem;
+    transition: 0.3s ease-in-out;
+}
+/* ------------------------------------------------------------------------------- */
+/* ---------------------------------heading-------------------------------------- */
+.heading{
+    padding: 3rem;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 0.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product .heading, .contact .heading{
+    color: var(--text-color2); 
+}
+.newRelease .heading, .about .heading{
+    color: var(--nav-text-color);
+}
+/* ------------------------------------------------------------------------------- */
+
+/********************************* new release section *********************************/
+.newRelease{
+    background-color: var(--background-color1);
+}
+.newRelease .newReleaseContainer{
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+    padding-inline: 4rem;
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 7;
+}
+.picture{
+    position: relative;
+    height: 28rem;
+    width: 28rem;
+}
+.picture3{
+    position: relative;
+    height: 25rem;
+    width: 35rem;
+}
+.picture::before, .picture3::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(220, 160, 201) 0%, rgba(220, 160, 201) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+}
+.picture img {
+    position: relative;
+    display: block;
+    width: 28rem;
+    z-index: 9;
+    transition: 0.3s ease-in-out;
+}
+.picture3 img {
+    position: relative;
+    display: block;
+    width: 35rem;
+    z-index: 9;
+    transition: 0.3s ease-in-out;
+}
+.picture img:hover{
+    width: 30rem;
+    transition: 0.3s ease-in-out;
+}
+.picture3 img:hover{
+    width: 37rem;
+    transition: 0.3s ease-in-out;
+}
+.itemInfo {
+    flex: 1;
+    font-size: 2rem;
+    color: var(--nav-text-color);
+    z-index: 9;
+}
+
+/********************************* products section *********************************/
+.products{
+    background-color: var(--background-color2);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.products .productContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: auto;
+}
+.products .productContainer .product{
+    background-color: var(--nav-color);
+    width: 17rem;
+    border-radius: 0.8rem;
+}
+.productContainer .product .productImage{
+    height: 17rem;
+    margin-top: 1rem;
+    background-color: var(--nav-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productContainer .product .productImage img{
+    width: 15rem;
+    transition: 0.3s ease-in-out;
+}
+.productContainer .product .productImage img:hover{
+    width: 17rem;
+    transition: 0.3s ease-in-out;
+}
+.productContainer .product .productName{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--nav-text-color);
+}
+.productContainer .product .call{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    gap: 1rem;
+}
+.productContainer .product .call p, i{
+    color: var(--nav-text-color);
+    font-size: 1rem;
+}
+
+/********************************* about section *********************************/
+.about{
+    background-color: var(--background-color1);
+}
+.aboutContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-inline: 5rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+.aboutContainer .aboutImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 30rem;
+}
+.aboutContainer .aboutImage img{
+    width: 35rem;
+    height: 30rem;
+    transition: 0.3s ease-in-out;
+}
+.aboutContainer .aboutImage img:hover{
+    width: 37rem;
+    height: 32rem;
+    transition: 0.3s ease-in-out;
+}
+.aboutContainer .aboutInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--nav-text-color);
+}
+
+/********************************* contact section *********************************/
+.contact{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color2);
+    padding-bottom: 2rem;
+}
+.contact .contactContainer{
+    display: flex;
+    padding-inline: 4rem;
+    gap: 2rem;
+}
+.contactContainer .myContact, .contactUs{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    width: 50%;
+    gap: 2rem;
+}
+.contactContainer .myContact .phone, .email, .contactUs .name, .contactUs .email{
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color1);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 0.1rem solid var(--text-color2);
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 100%;
+    gap: 1rem;
+}
+.contactContainer .myContact .address, .contactUs .message{
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color1);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 0.1rem solid var(--text-color2);
+    border-radius: 0.5rem;
+    height: 10rem;
+    width: 100%;
+    gap: 1rem;
+}
+.contactContainer .myContact i{
+    color: var(--text-color1);
+}
+.contactUs .name input, .email input, .message textarea{
+    background: none;
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+}
+.contactUs .name input::placeholder, .email input::placeholder, .message textarea::placeholder{
+    color: var(--nav-color);
+}
+.contactUs .message textarea{
+    padding-top: 0.5rem;
+}
+.contactUs .submitButton{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/********************************* footer section *********************************/
+.footer{
+    background-color: var(--nav-color);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.footer .footerContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 2rem;
+    gap: 1rem;
+}
+.footer .footerContainer .footerLeft{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer .footerContainer .company-info{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footerContainer .company-info .tagline{
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    color: var(--nav-text-color);
+}
+.company-info .follow{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.follow .follow-text{
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    color: var(--nav-text-color);
+}
+.follow .follow-icons{
+    height: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+}
+.follow .follow-icons i{
+    font-size: 2rem;
+    color: var(--nav-text-color);
+    transition: 0.3s ease-in-out;
+}
+.follow .follow-icons i:hover{
+    font-size: 2.5rem;
+    transition: 0.3s ease-in-out;
+}
+.footerContainer .quick-links{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    color: var(--nav-text-color);
+    width: 20rem;
+    gap: 0.5rem;
+}
+.footerContainer .quick-links a{
+    padding-left: 1rem;
+    color: var(--nav-text-color);
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+}
+.footerContainer .quick-links a:hover{
+    padding-left: 1.7rem;
+    transition: 0.3s ease-in-out;
+}
+.footer .footerContainer .footerRight{
+    width: 40%;
+    display: flex;
+}
+.footerContainer .contact-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    color: var(--nav-text-color);
+    width: 35rem;
+    gap: 1.5rem;
+}
+.contact-info .footer-phone, .footer-email, .footer-address{
+    display: flex;
+    justify-content: left;
+}
+.contact-info .footer-phone p, .footer-email p, .footer-address p{
+    font-size: 1.2rem;
+    color: var(--nav-text-color);
+    transition: 0.3s ease-in-out;
+}
+.contact-info .footer-phone p:hover, .footer-email p:hover, .footer-address p:hover{
+    padding-left: 1.7rem;
+    transition: 0.3s ease-in-out;
+}
+.contact-info .footer-phone i, .footer-email i, .footer-address i{
+    padding-right: 1rem;
+}
+
+
+
+
+@media(max-width: 1450px){
+    .navContainer .navbar a{
+        font-size: 0.9rem;
+    }
+    /* ------------------------------------------------ */
+    .home .homeImage img{
+        height: 25rem;
+    }
+    .homeContainer .pageDescription .tagline{
+        font-size: 2.5rem;
+    }
+    /* ------------------------------------------------ */
+    .products .productContainer .product{
+        width: 14rem;
+    }
+    .productContainer .product .productImage{
+        height: 12rem;
+    }
+    .productContainer .product .productImage img{
+        width: 12rem;
+    }
+    .productContainer .product .productImage img:hover{
+        width: 14rem;
+    }
+    /* ------------------------------------------------ */
+}
+@media(max-width: 1200px){
+    .navContainer{
+        gap: 20rem;
+    }
+    .navContainer .navbar{
+        gap: 0.8rem;
+    }
+    /* ------------------------------------------------ */
+    .home .homeImage{
+        padding-left: 2rem;
+    }
+    /* ------------------------------------------------ */
+    .products .productContainer .product{
+        width: 10rem;
+    }
+    .productContainer .product .productImage{
+        height: 10rem;
+    }
+    .productContainer .product .productImage img{
+        width: 8rem;
+    }
+    .productContainer .product .productImage img:hover{
+        width: 10rem;
+    }
+    /* ------------------------------------------------ */
+    .aboutContainer .aboutImage{
+        width: 25rem;
+        height: 20rem;
+    }
+    .aboutContainer .aboutImage img{
+        width: 25rem;
+        height: 20rem;
+    }
+    .aboutContainer .aboutImage img:hover{
+        width: 27rem;
+        height: 22rem;
+    }
+    .aboutContainer .aboutInfo{
+        font-size: 1.2rem;
+    }
+    /* ------------------------------------------------ */
+}
+@media(max-width: 1000px){
+    .heading{
+        font-size: 4rem;
+    }
+    /* ------------------------------------------------ */
+    .itemInfo {
+        font-size: 1.3rem;
+    }
+    /* ------------------------------------------------ */
+    .navContainer{
+        gap: 15rem;
+    }
+    /* ------------------------------------------------ */
+    .contactContainer .myContact, .contactUs{
+        padding-inline: 0;
+    }
+    /* ------------------------------------------------ */
+}
+@media(max-width: 890px){
+    button{
+        height: 2.2rem;
+        width: 7rem;
+        border-radius: 0.6rem;
+        font-size: 1rem;
+    }
+    button:hover{
+        height: 2.5rem;
+        width: 7.5rem;
+        font-size: 1rem;
+    }
+    /* ------------------------------------------------ */
+    .navContainer{
+        gap: 5rem;
+    }
+    /* ------------------------------------------------ */
+    .home .homeImage{
+        padding-left: 2rem;
+        height: 15rem;
+        width: 15rem;
+    }
+    .home .homeImage img{
+        height: 23rem;
+    }
+    .homeContainer .pageDescription{
+        width: 65%;
+    }
+    .homeContainer .pageDescription .tagline{
+        font-size: 2rem;
+    }
+    .homeContainer .pageDescription .subline{
+        font-size: 1rem;
+    }
+    /* ------------------------------------------------ */
+    .item {
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 0.7rem;
+    }
+    .middleItem{
+        flex-direction: column-reverse;
+    }
+    .picture {
+        height: 14rem;
+        width: 14rem;
+    }
+    .picture3{
+        height: 12rem;
+        width: 17rem;
+    }
+    .picture::before, .picture3::before {
+        width: 100%;
+        height: 100%; 
+    }
+    .picture img {
+        width: 14rem; 
+    }
+    .picture3 img {
+        width: 17rem;
+    }
+    .picture img:hover{
+        width: 15rem;
+    }
+    .picture3 img:hover{
+        width: 19rem;
+    }
+    .itemInfo {
+        font-size: 1.1rem;
+    }
+    /* ------------------------------------------------ */
+    .products .productContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .products .productContainer .product{
+        width: 14rem;
+    }
+    .productContainer .product .productImage{
+        height: 14rem;
+    }
+    .productContainer .product .productImage img{
+        width: 12rem;
+    }
+    .productContainer .product .productImage img:hover{
+        width: 14rem;
+    }
+    /* ------------------------------------------------ */
+    .aboutContainer .aboutImage{
+        width: 15rem;
+        height: 10rem;
+    }
+    .aboutContainer .aboutImage img{
+        width: 15rem;
+        height: 10rem;
+    }
+    .aboutContainer .aboutImage img:hover{
+        width: 17rem;
+        height: 12rem;
+    }
+    .aboutContainer .aboutInfo{
+        font-size: 1.2rem;
+    }
+    /* ------------------------------------------------ */
+    .contactContainer .myContact, .contactUs{
+        gap: 1rem;
+    }
+    .contactContainer .myContact .phone, .email{
+        font-size: 1rem;
+    }
+    .contactContainer .myContact .phone, .email, .contactUs .name, .contactUs .email{
+        height: 2rem;
+    }
+    .contactContainer .contactUs .name input, .email input{
+        font-size: 1rem;
+    }
+    .contactContainer .myContact .address, .contactUs textarea{
+        font-size: 1rem;
+    }
+    .contactContainer .myContact .address, .contactUs .message{
+        height: 7rem;
+    }
+    /* ------------------------------------------------ */
+    .footerContainer .company-info .tagline, 
+    .follow .follow-text{
+        font-size: 1rem;
+    }
+    .follow .follow-icons i{
+        font-size: 1.5rem;
+    }
+    .follow .follow-icons i:hover{
+        font-size: 1.8rem;
+    }
+    .footerContainer .quick-links{
+        font-size: 1.4rem;
+    }
+    .footerContainer .quick-links a{
+        font-size: 1rem;
+    }
+    .footerContainer .quick-links a:hover{
+        padding-left: 1.2rem;
+    }
+    .footerContainer .contact-info{
+        font-size: 1.4rem;
+    }
+    .contact-info .footer-phone p, .footer-email p, .footer-address p{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 736px){
+    .heading{
+        font-size: 3.5rem;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+    /* ------------------------------------------------ */
+    button{
+        height: 2rem;
+        width: 5rem;
+        border-radius: 0.6rem;
+        font-size: 0.8rem;
+    }
+    button:hover{
+        height: 2.2rem;
+        width: 5.2rem;
+        font-size: 0.8rem;
+    }
+    /* ------------------------------------------------ */
+    .menuBtn{
+        display: flex;
+        padding-inline: 4rem;
+    }
+    .header .navContainer .navbar{
+        display: none;
+    }
+    /* ------------------------------------------------ */
+    .home .homeImage{
+        padding-top: 5rem;
+    }
+    .home .homeImage img{
+        height: 21rem;
+    }
+    .home{
+        justify-content: center;
+    }
+    /* ------------------------------------------------ */
+    .itemInfo {
+        font-size: 1rem;
+    }
+    /* ------------------------------------------------ */
+    .products .productContainer .product{
+        width: 10rem;
+    }
+    .productContainer .product .productImage{
+        height: 10rem;
+    }
+    .productContainer .product .productImage img{
+        width: 8rem;
+    }
+    .productContainer .product .productImage img:hover{
+        width: 10rem;
+    }
+    /* ------------------------------------------------ */
+    .aboutContainer{
+        padding-inline: 2rem;
+    }
+    .aboutContainer .aboutInfo{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    /* ------------------------------------------------ */
+    .contact .contactContainer{
+        padding-inline: 2rem;
+        gap: 1rem;
+    }
+    .contactContainer .myContact, .contactUs{
+        padding-inline: 0;
+    }
+    .contactContainer .myContact .phone, .email{
+        padding-inline: 0.5rem;
+        font-size: 0.7rem;
+        overflow-x: hidden;
+        gap: 0.5rem;
+    }
+    .contactContainer .contactUs .name input, .email input{
+        font-size: 0.7rem;
+    }
+    .contactContainer .myContact .address, .contactUs textarea{
+        font-size: 0.7rem;
+        padding-inline: 0.5rem;
+        gap: 0.5rem;
+    }
+}
+@media(max-width: 636px){
+    .home .homeImage{
+        display: none;
+    }
+    .homeContainer{
+        background: url("./images/background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .homeContainer .pageDescription{
+        padding-right: 0;
+        width: 50%;
+    }
+    .homeContainer .pageDescription .tagline{
+        font-size: 1.7rem;
+    }
+    /* ------------------------------------------------ */
+    .footer .footerContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .footer .footerContainer .footerRight, 
+    .footer .footerContainer .footerLeft{
+        width: 100%;
+    }
+    .footer .footerContainer .footerRight .contact-info{
+        gap: 0.7rem;
+    }
+}
+@media(max-width: 536px){
+    .heading{
+        font-size: 3.3rem;
+    }
+    /* ------------------------------------------------ */
+    .homeContainer .pageDescription{
+        padding: 1rem;
+        width: 100%;
+    }
+    .homeContainer .pageDescription .tagline{
+        font-size: 2rem;
+    }
+    .homeContainer .pageDescription .subline{
+        font-size: 1.5rem;
+    }
+    /* ------------------------------------------------ */
+    .itemInfo{
+        font-size: 0.8rem;
+    }
+    /* ------------------------------------------------ */
+    .products .productContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .products .productContainer .product{
+        width: 11rem;
+        border-radius: 0.8rem;
+    }
+    /* ------------------------------------------------ */
+    .aboutContainer{
+        flex-direction: column;
+    }
+    .aboutContainer .aboutImage{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    /* ------------------------------------------------ */
+}
+@media(max-width: 436px){
+    .products .productContainer .product{
+        width: 10rem;
+        border-radius: 0.8rem;
+    }
+}
